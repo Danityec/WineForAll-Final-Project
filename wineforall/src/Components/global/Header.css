@@ -1,0 +1,42 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    --header-height: calc(12%);
+    height: 12%;
+    background-color: #B98E52;
+}
+
+.header .header-content {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    background-image: url('WineForAll.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20%;
+    height: 65%;
+}
+
+.user-avatar {
+    cursor: pointer;
+}
+
+#menu-list {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    background-color: transparent;
+}
+
+.menu-list-item {
+    text-decoration: none;
+    color: #EDF5FF;
+}
