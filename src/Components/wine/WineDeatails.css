@@ -20,7 +20,7 @@
 }
 .image {
     display: flex;
-    margin-top: 5%;
+    margin-top: 0;
 }
 .image img {
     width: 100%;
@@ -34,6 +34,7 @@
 .moreDeatils {
     display: flex;
     margin-top:4%;
+    margin-left: -10%;
 
 }
 .moreDeatils span {

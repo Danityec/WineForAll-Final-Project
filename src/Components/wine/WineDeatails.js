@@ -7,33 +7,20 @@ import './WineDeatails.css';
 export default function WinePage(props) {
     return (
         <div>
-            <div className={"firstRow"}>
-                <h3>{props.item.wineName},{props.item.City}</h3>
-                <p>{props.item.Description}</p>
-            </div>
             <div className={"image"}>
-                <img src={props.item.UrlPicture} alt="Asset" />
+                <img src={props.item.winePic} alt="Wine" />
             </div>
-            {/* <div className={"rowDetlails"}>
-                <div>
-                    <StreetviewIcon />
-                    <p>{props.item.Street}</p>
-                </div>
-                <div>
-                    <ConfirmationNumberIcon />
-                    <p>{props.item.Zip}</p>
-                </div>
-                <div>
-                    <LocationCityIcon />
-                    <p>{props.item.Neighborhood}</p>
-                </div>
-                <div>
-                    <AspectRatioIcon />
-                    <p>{props.item.SquareFeet} m^2</p>
-                </div>
-            </div> */}
+            <div className={"firstRow"}>
+                <h3>Name: {props.item.wineName}</h3>
+                <h3>Manufacture: {props.item.manufacture}</h3>
+                <h3>Wine Type: {props.item.kind}</h3>
+                <h3>Color: {props.item.color}</h3>
+                <h3>Year: {props.item.year}</h3>
+                <h3>Suits For: {props.item.foodPairing}</h3>
+                <p>{props.item.description}</p>
+            </div>
             <div className={"moreDeatils"}>
-                <span>${props.item.winePrice}$<br />(exclude shipping)</span>
+                <span>{props.item.winePrice}$ (exclude shipping)</span>
             </div>
         </div>
     );

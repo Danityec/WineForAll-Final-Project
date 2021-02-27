@@ -2,9 +2,25 @@
     margin-left: 35%;
     margin-top: 3%;
 } */
-.search{
-    background-image: url(./Media/background.png);
-    position: relative;
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: chartreuse;
+}
+
+.background{
+    background-image: url('./Media/background.png');
+    position: absolute;
+    background-color: brown;
+    float: left;
+}
+.Search{
+    /* background-image: url(./Media/background.png); */
+    height: 100%;
+    width: 70%;
+    /* margin-left: 30%; */
+    position: absolute;
 }
 .input {
     width: 40%;
@@ -13,19 +29,6 @@
     font-family: 'Lato';
     font-size: 20px;
 }
-/* .assetSearchForm form Button {
-    margin-top: 2%;
-    width: 40%;
-    height: 60px;
-} */
-/* .assetSearchForm p {
-    margin-top: 3%;
-    margin-left: 35%;
-} */
-/* Button.filterBut {
-    margin-left: 40%;
-    margin-top: 2%;
-} */
 
 .checkboxs{
     display: flex;
@@ -36,8 +39,11 @@
 }
 .selectOption{
     width: 100%;
-    padding: 5%;
+    height: 30%;
+    padding: 1%;
+    padding-left: 0;
+    
 }
 button{
-    color: #B98E52;
+    background-color: #B98E52;
 }

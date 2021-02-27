@@ -1,42 +1,38 @@
-.header {
-    position: fixed;
-    top: 0;
+.navBar {
     width: 100%;
-    --header-height: calc(12%);
-    height: 12%;
-    background-color: #B98E52;
-}
-
-.header .header-content {
-    margin: 0 auto;
-    width: 90%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.logo {
-    background-image: url('./Media/WineForAll.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 20%;
-    height: 65%;
-}
-
-.user-avatar {
-    cursor: pointer;
-}
-
-#menu-list {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-end;
+    height: 100px;
     background-color: transparent;
+    top: 0;
+    right: 0;
 }
-
-.menu-list-item {
+.navBar h1 {
+    margin-left: 5%; 
+ 
+}
+.navBar h1 a {
+    font-size: 100%;
     text-decoration: none;
-    color: #EDF5FF;
+    font-family: 'Roboto' Condensed;
+    font-style: normal;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: rgb(117, 117, 117);
+}
+.navBar h4 a{
+    color:  rgb(117, 117, 117);
+    font-size: 110%;
+    text-decoration: none;
+}
+.navBar h4 {
+    margin-right: 20%;
+    margin-top: -2%;   
+}
+.rowOptionsNavBar{
+    display: flex;
+    flex-direction: row;
+    margin-left: 40%;
+}
+.rowOptionsNavBar button {
+    margin-top: -3%;   
 }

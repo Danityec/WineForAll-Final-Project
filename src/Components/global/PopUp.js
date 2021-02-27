@@ -14,7 +14,7 @@ export default function PopUp(props) {
     const okBtn = () => {
         return (
             <ButtonBase className={'okBtn'} centerRipple={true} onClick={props.onSubmit}>
-                <p>Ok</p>
+                <p>Add to Cart</p>
             </ButtonBase>
         )
     }

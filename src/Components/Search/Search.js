@@ -25,7 +25,6 @@ export default function Search(props) {
         fetch(`http://localhost:3000/api/wines?wineName=${wineName}&year=${year}&kind=${kind}&color=${color}&winePrice=${winePrice}&foodPairing=${foodPairing}&manufacturID=${manufacturID}`)
             .then(response => response.json())
             .then(result => {
-                console.log(result)
                 setWineList(result)
                 // setOpenEdit(false)
                 setWineName("")
@@ -39,46 +38,51 @@ export default function Search(props) {
             )
     }
     return (
-        <div className={'Search'}>
-            <Header/>
-            <form noValidate autoComplete="off">
-                <div><TextField className="input" label="wineName" onChange={(event) => setWineName(event.target.value)} value={wineName} /></div>
-                <div><TextField className="input" label="manufacturID" onChange={(event) => setManufacturID(event.target.value)} value={manufacturID} /></div>
-                <div className={"selectOption"}>
-                    <FormControl >
-                        <InputLabel htmlFor="age-native-simple">Food Pairing</InputLabel>
-                        <Select native value={foodPairing} onChange={e => setFoodPairing(e.target.value)}>
-                            <option aria-label="None" value="foodPairing" />
-                            <option>Fish</option>
-                            <option>Sushi</option>
-                            <option>Steak</option>
-                            <option>Italian</option>
-                            <option>Desserts</option>
-                        </Select>
-                    </FormControl>
+        <div>
+            <Header />
+            <div className={'wrapper'}>
+                <div className={'background'}>dekel</div>
+                <div className={'Search'}>
+                    <form noValidate autoComplete="off">
+                        <div><TextField className="input" label="Wine Name" onChange={(event) => setWineName(event.target.value)} value={wineName} /></div>
+                        <div><TextField className="input" label="Manufactur" onChange={(event) => setManufacturID(event.target.value)} value={manufacturID} /></div>
+                        <div className={"selectOption"}>
+                            <FormControl style={{ minWidth: "40%" }} >
+                                <InputLabel htmlFor="age-native-simple">Food Pairing</InputLabel>
+                                <Select native value={foodPairing} onChange={e => setFoodPairing(e.target.value)}>
+                                    <option aria-label="None" value="foodPairing" />
+                                    <option>Fish</option>
+                                    <option>Sushi</option>
+                                    <option>Steak</option>
+                                    <option>Italian</option>
+                                    <option>Desserts</option>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div className={"selectOption"}>
+                            <FormControl style={{ minWidth: "40%" }} >
+                                <InputLabel htmlFor="age-native-simple">Wine Kind</InputLabel>
+                                <Select native value={kind} onChange={e => setKind(e.target.value)}>
+                                    <option aria-label="None" value="kind" />
+                                    <option>Cabernet Sauvignon</option>
+                                    <option>Syrah</option>
+                                    <option>Pinot Noir</option>
+                                    <option>Chardonnay</option>
+                                    <option>Sauvignon Blanc</option>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div><TextField className="input" label="year" onChange={(event) => setYear(event.target.value)} value={year} /></div>
+                        <div className={"checkboxs"}>
+                            <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)} value={"Red"} />} label="Red" />
+                            <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)} value={"White"} />} label="White" />
+                            <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)} value={"Rose"} />} label="Rose" />
+                        </div>
+                        <div><Button variant="contained" onClick={onSubmit} value="search" >search</Button> </div>
+                    </form>
+                    <WineList WineList={wineList} />
                 </div>
-                <div className={"selectOption"}>
-                    <FormControl >
-                        <InputLabel htmlFor="age-native-simple">Wine Kind</InputLabel>
-                        <Select native value={kind} onChange={e => setKind(e.target.value)}>
-                            <option aria-label="None" value="kind" />
-                            <option>Cabernet Sauvignon</option>
-                            <option>Syrah</option>
-                            <option>Pinot Noir</option>
-                            <option>Chardonnay</option>
-                            <option>Sauvignon Blanc</option>
-                        </Select>
-                    </FormControl>
-                </div>
-                <div><TextField className="input" label="year" onChange={(event) => setYear(event.target.value)} value={year} /></div>
-                <div className={"checkboxs"}>
-                    <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)}  value={"red"} />} label="Red" />
-                    <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)}  value={"white"} />} label="White" />
-                    <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)}   value={"rose"} />} label="Rose" />
-                </div>
-                <div><Button variant="contained"  onClick={onSubmit} value="search" >search</Button> </div>
-            </form> 
-            <WineList WineList={wineList} />
+            </div>
         </div>
     )
 }
