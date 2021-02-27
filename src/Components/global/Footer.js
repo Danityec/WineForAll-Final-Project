@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import CopyrightIcon from '@material-ui/icons/Copyright';
+import './Footer.css';
 
-
-const Footer = (props) => {
+export default function Footer(props) {
     return (
-        <h1>Footer</h1>
-    )
+        <div className={"footer"}>
+            <CopyrightIcon className={'copy-right'}/>
+            <span>Wine For All</span>
+        </div>
+    );
 }
-export default Footer

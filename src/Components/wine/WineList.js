@@ -20,7 +20,7 @@ export default function WineList(props) {
     }
     return (
         <Grid container direction="row" justify="center" alignItems="center" style={{ marginBottom: "2%" }}>
-            { props.wineList.map(eachItem)}
+            { props.WineList.map(eachItem)}
         </Grid>
     )
 }
