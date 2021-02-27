@@ -6,13 +6,12 @@
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
 }
 
 .background{
     background-image: url('./Media/background.png');
     position: absolute;
-    background-color: brown;
     float: left;
 }
 .Search{
