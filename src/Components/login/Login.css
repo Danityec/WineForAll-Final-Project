@@ -31,7 +31,7 @@ p {
 }
 .leftbackground {
     position: absolute;
-    background-image: url('./Media/signin.png');
+    background-image: url('./Media/background.png');
     height: 80%;
     width: 50%;
 }

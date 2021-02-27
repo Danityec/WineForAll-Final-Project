@@ -18,7 +18,7 @@
 
 
 .logo {
-    background-image: url('WineForAll.png');
+    background-image: url('./Media/WineForAll.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 20%;

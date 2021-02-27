@@ -1,0 +1,43 @@
+/* .assetSearchForm form{
+    margin-left: 35%;
+    margin-top: 3%;
+} */
+.search{
+    background-image: url(./Media/background.png);
+    position: relative;
+}
+.input {
+    width: 40%;
+    height: 60px;
+    margin-top: 2%;
+    font-family: 'Lato';
+    font-size: 20px;
+}
+/* .assetSearchForm form Button {
+    margin-top: 2%;
+    width: 40%;
+    height: 60px;
+} */
+/* .assetSearchForm p {
+    margin-top: 3%;
+    margin-left: 35%;
+} */
+/* Button.filterBut {
+    margin-left: 40%;
+    margin-top: 2%;
+} */
+
+.checkboxs{
+    display: flex;
+}
+.inputs {
+    display: flex;
+    flex-direction: row;
+}
+.selectOption{
+    width: 100%;
+    padding: 5%;
+}
+button{
+    color: #B98E52;
+}

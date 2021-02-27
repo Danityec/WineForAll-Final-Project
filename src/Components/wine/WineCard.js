@@ -17,7 +17,7 @@ export default function WineCard (props) {
     const classes = useStyles();
     return (
         <Card className={classes.card}>
-            <CardMedia component="img" height="140" image={props.item.UrlPicture} title="Referrals"/>
+            <CardMedia component="img" height="140" image={props.item.urlPic} title="Referrals"/>
             <CardContent>
                 <Typography component="h5" style={{fontFamily: 'Lato',overflow: 'hidden',webkitLineClamp: '2',textOverflow: 'ellipsis'}}>
                     {props.item.Description}
@@ -32,7 +32,7 @@ export default function WineCard (props) {
                 Year {props.item.year} 
                 </Typography>
             </CardContent>
-            <WinePage item={props.item}/>
+            {/* <WinePage item={props.item}/> */}
         </Card> 
     );
 }

@@ -3,13 +3,9 @@ import Grid from '@material-ui/core/Grid';
 
 export default function WineList(props) {
     const wineWanted = (item) => {
-        if (item.RenterId === -1) {
-            return (
-                <WineCard key={item.id} id={item.id} item={item} renterId={props.renterId}>
-                    {props.children}
-                </WineCard>
-            )
-        }
+        return (
+            <WineCard key={item._id} id={item._id} item={item} />
+        )
     }
     const eachItem = (item) => {
         return (

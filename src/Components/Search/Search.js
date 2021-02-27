@@ -9,7 +9,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import './search.css';
-
+import Header from '../global/Header'
 export default function Search(props) {
     const [wineName, setWineName] = useState("");
     const [year, setYear] = useState("");
@@ -19,14 +19,15 @@ export default function Search(props) {
     const [foodPairing, setFoodPairing] = useState("");
     const [manufacturID, setManufacturID] = useState("");
     const [wineList, setWineList] = useState([]);
-    const [openEdit, setOpenEdit] = useState(false);
+    // const [openEdit, setOpenEdit] = useState(false);
 
     const onSubmit = () => {
         fetch(`http://localhost:3000/api/wines?wineName=${wineName}&year=${year}&kind=${kind}&color=${color}&winePrice=${winePrice}&foodPairing=${foodPairing}&manufacturID=${manufacturID}`)
             .then(response => response.json())
             .then(result => {
+                console.log(result)
                 setWineList(result)
-                setOpenEdit(false)
+                // setOpenEdit(false)
                 setWineName("")
                 setYear("")
                 setKind("")
@@ -39,6 +40,7 @@ export default function Search(props) {
     }
     return (
         <div className={'Search'}>
+            <Header/>
             <form noValidate autoComplete="off">
                 <div><TextField className="input" label="wineName" onChange={(event) => setWineName(event.target.value)} value={wineName} /></div>
                 <div><TextField className="input" label="manufacturID" onChange={(event) => setManufacturID(event.target.value)} value={manufacturID} /></div>
@@ -70,11 +72,11 @@ export default function Search(props) {
                 </div>
                 <div><TextField className="input" label="year" onChange={(event) => setYear(event.target.value)} value={year} /></div>
                 <div className={"checkboxs"}>
-                    <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)} color="primary" value={"red"} />} label="Red" />
-                    <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)} color="primary" value={"white"} />} label="White" />
-                    <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)} color="primary" value={"rose"} />} label="Rose" />
+                    <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)}  value={"red"} />} label="Red" />
+                    <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)}  value={"white"} />} label="White" />
+                    <FormControlLabel control={<Checkbox onChange={e => setColor(e.target.value)}   value={"rose"} />} label="Rose" />
                 </div>
-                <div><Button variant="contained" color="primary" onClick={onSubmit} value="search" >search</Button> </div>
+                <div><Button variant="contained"  onClick={onSubmit} value="search" >search</Button> </div>
             </form> 
             <WineList WineList={wineList} />
         </div>
