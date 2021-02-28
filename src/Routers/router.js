@@ -8,7 +8,9 @@ import UserRouter from "./UserRouter";
 import AdminRouter from "./AdminRouter";
 import Footer from '../Components/global/Footer' ;
 import Search from '../Components/search/Search';
+import Favorite from '../Components/client/Favorite';
 import Manufacturer from '../Components/manufacturer/Manufacturer';
+// import { Favorite } from '@material-ui/icons';
 
 const ReactRouter = () => {
     return (
@@ -16,7 +18,8 @@ const ReactRouter = () => {
            
            <Route exact path='/' component={Login}/>
            <Route  path='/search' component={Search}/>
-           <Route  path='/manufacture-sell' component={Manufacturer}/>
+           <Route  path='/favorite' component={Favorite}/>
+           {/* <Route  path='/manufacture-sell' component={Manufacturer}/> */}
 
            {/* <Route  path='/dashboard' component={ad}/> */}
            {/* <Route path='/admin' component={Login}/> */}

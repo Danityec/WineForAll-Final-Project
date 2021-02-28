@@ -18,16 +18,16 @@ export default function WinePage(props) {
         setWine(result)
       })    
   },[wine])
-  const wantIt = () => {
+  const addToFav = () => {
     const body={googleID: cookies.user.id}
-    fetch(`https://localhost:3000/api/wines?wineName=${wine._id}`, {
+    fetch(`https://localhost:3000/api/client?wineName=${1}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body),
         })
         .then(response => response.json())
         .then(result => { 
-          let path = '/wines'
+          let path = '/favorite'
           alert("Wine added to Favorite")
           history.push({
             pathname: path,
@@ -38,12 +38,12 @@ export default function WinePage(props) {
     const haveWine = () => {
       if(wine.length < 0) {
         return (
-          <Button variant="outlined"  style={{margin:'2%'}} onClick={() => wantIt()} disabled>Add to Favorite</Button>
+          <Button variant="outlined"  style={{margin:'2%'}} onClick={() => addToFav()} disabled>Add to Favorite</Button>
         )
       }
       else {
         return (
-          <Button variant="outlined"  style={{margin:'2%'}} onClick={() => wantIt()}>Add to Favorite</Button>
+          <Button variant="outlined"  style={{margin:'2%'}} onClick={() => addToFav()}>Add to Favorite</Button>
         )
       }
     }
