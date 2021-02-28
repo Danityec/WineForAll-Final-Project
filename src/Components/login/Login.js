@@ -5,6 +5,7 @@ import Footer from '../global/Footer';
 import GoogleLogin from 'react-google-login';
 import { useHistory } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import Header from '../global/Header'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -55,15 +56,18 @@ export default function Login(props) {
         console.log(response);
     }
     return (
+        <>
         <div className={'background'}>
             <div className={'leftbackground'}>
                 <h1 className={"headSignIn"}>Wine For All</h1>
             </div>
             <div className={"signInContainer"}>
+                <div className={'text-login'}>
                 <p>Choose a wine by personal preference</p>
-                <p>Start by filtering initial preferences for a perfect choice </p>
+                <p>Start by filtering initial<br/> preferences for a perfect choice </p>
                 <p>Learn about the wine and its notes</p>
-                <p>Purchase the perfect wine to complete the experience</p>
+                <p>Purchase the perfect wine<br/> to complete the experience</p>
+                </div>
                 <div className={"googleLogIn"}>
                     <GoogleLogin
                         className={classes.google}
@@ -75,6 +79,7 @@ export default function Login(props) {
             </div>
             <Footer />
         </div>
+        </>
     );
 }
 
