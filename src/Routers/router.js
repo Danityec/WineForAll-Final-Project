@@ -21,7 +21,7 @@ const ReactRouter = () => {
            <Route  path='/search' component={Search}/>
            <Route  path='/favorite' component={Favorite}/>
            <Route  path='/admin' component={Admin}/>
-           {/* <Route  path='/manufacture-sell' component={Manufacturer}/> */}
+           <Route  path='/manufacture-sell' component={Manufacturer}/>
 
            {/* <Route  path='/dashboard' component={ad}/> */}
            {/* <Route path='/admin' component={Login}/> */}
