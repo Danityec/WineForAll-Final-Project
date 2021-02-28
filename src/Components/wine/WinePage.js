@@ -12,18 +12,17 @@ export default function WinePage(props) {
   const [cookies] = useCookies(['user']);
 
   useEffect(() => {
-    fetch(`https://localhost:3000/api/client?favorite=${wine._id}`, { withCredentials: true, credentials: 'include' })
+    fetch(`https://localhost:3000/api/wine?_id=${wine._id}`, { withCredentials: true, credentials: 'include' })
       .then(response => response.json())
       .then(result =>  {
         setWine(result)
       })    
   },[wine])
   const addToFav = () => {
-    const body={googleID: cookies.user.id}
-    fetch(`https://localhost:3000/api/client?wineName=${1}`, {
+    fetch(`https://localhost:3000/api/client?googleID=${1}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(body),
+            body: JSON.stringify(wine),
         })
         .then(response => response.json())
         .then(result => { 

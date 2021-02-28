@@ -2,7 +2,7 @@ import React from 'react';
 import {Route} from 'react-router-dom';
 import HomePage from "../Components/homePage/HomePage";
 import Wine from "../Components/wine/WineCard";
-import AdminHomePage from "../Components/admin/AdminHomePage";
+import AdminHomePage from "../Components/admin/Admin";
 import Login from "../Components/login/Login";
 import UserRouter from "./UserRouter";
 import AdminRouter from "./AdminRouter";
@@ -10,6 +10,8 @@ import Footer from '../Components/global/Footer' ;
 import Search from '../Components/search/Search';
 import Favorite from '../Components/client/Favorite';
 import Manufacturer from '../Components/manufacturer/Manufacturer';
+import Admin from '../Components/admin/Admin'
+import LoginDeatails from '../Components/login/LoginDeatails'
 // import { Favorite } from '@material-ui/icons';
 
 const ReactRouter = () => {
@@ -19,6 +21,7 @@ const ReactRouter = () => {
            <Route exact path='/' component={Login}/>
            <Route  path='/search' component={Search}/>
            <Route  path='/favorite' component={Favorite}/>
+           <Route  path='/admin' component={Admin}/>
            {/* <Route  path='/manufacture-sell' component={Manufacturer}/> */}
 
            {/* <Route  path='/dashboard' component={ad}/> */}

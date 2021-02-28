@@ -4,7 +4,6 @@ import './WineList.css'
 export default function WineList(props) {
     const wineWanted = (item) => {
         return (
-            console.log(item),
             <WineCard key={item._id} id={item._id} item={item} />
         )
     }
