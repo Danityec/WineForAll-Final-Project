@@ -8,13 +8,16 @@ import UserRouter from "./UserRouter";
 import AdminRouter from "./AdminRouter";
 import Footer from '../Components/global/Footer' ;
 import Search from '../Components/search/Search';
+import Manufacturer from '../Components/manufacturer/Manufacturer';
 
 const ReactRouter = () => {
     return (
-        <>
+        <>  
            
            <Route exact path='/' component={Login}/>
            <Route  path='/search' component={Search}/>
+           <Route  path='/manufacture-sell' component={Manufacturer}/>
+
            {/* <Route  path='/dashboard' component={ad}/> */}
            {/* <Route path='/admin' component={Login}/> */}
             {/* <UserRouter path='/dashboard' component={HomePage}/> */}

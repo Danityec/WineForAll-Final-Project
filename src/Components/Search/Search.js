@@ -8,14 +8,16 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import './search.css';
+import './Search.css';
 import Header from '../global/Header'
+
+
 export default function Search(props) {
     const [wineName, setWineName] = useState("");
     const [year, setYear] = useState("");
     const [kind, setKind] = useState("");
     const [color, setColor] = useState("");
-    const [winePrice, setWinePrice] = useState("");
+    const [winePrice, setWinePrice] = useState("");  
     const [foodPairing, setFoodPairing] = useState("");
     const [manufacturID, setManufacturID] = useState("");
     const [wineList, setWineList] = useState([]);

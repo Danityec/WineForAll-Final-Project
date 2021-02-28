@@ -5,7 +5,7 @@ import './Footer.css';
 export default function Footer(props) {
     return (
         <div className={"footer"}>
-            <CopyrightIcon className={'copy-right'}/>
+            <CopyrightIcon className={'copy-right'}/>  
             <span>Wine For All</span>
         </div>
     );
