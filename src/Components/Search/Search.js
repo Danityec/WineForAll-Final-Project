@@ -8,7 +8,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import './search.css';
+import './Search.css';
 import Header from '../global/Header'
 export default function Search(props) {
     const [wineName, setWineName] = useState("");
@@ -17,12 +17,12 @@ export default function Search(props) {
     const [color, setColor] = useState("");
     const [winePrice, setWinePrice] = useState("");
     const [foodPairing, setFoodPairing] = useState("");
-    const [manufacturID, setManufacturID] = useState("");
+    const [manufacture, setManufacture] = useState("");
     const [wineList, setWineList] = useState([]);
     // const [openEdit, setOpenEdit] = useState(false);
 
     const onSubmit = () => {
-        fetch(`http://localhost:3000/api/wines?wineName=${wineName}&year=${year}&kind=${kind}&color=${color}&winePrice=${winePrice}&foodPairing=${foodPairing}&manufacturID=${manufacturID}`)
+        fetch(`http://localhost:3000/api/wines?wineName=${wineName}&year=${year}&kind=${kind}&color=${color}&winePrice=${winePrice}&foodPairing=${foodPairing}&manufacture=${manufacture}`)
             .then(response => response.json())
             .then(result => {
                 setWineList(result)
@@ -33,7 +33,7 @@ export default function Search(props) {
                 setColor("")
                 setWinePrice("")
                 setFoodPairing("")
-                setManufacturID("")
+                setManufacture("")
             }
             )
     }
@@ -41,11 +41,11 @@ export default function Search(props) {
         <div>
             <Header />
             <div className={'wrapper'}>
-                <div className={'background'}>dekel</div>
+                <div className={'background'}></div>
                 <div className={'Search'}>
                     <form noValidate autoComplete="off">
                         <div><TextField className="input" label="Wine Name" onChange={(event) => setWineName(event.target.value)} value={wineName} /></div>
-                        <div><TextField className="input" label="Manufactur" onChange={(event) => setManufacturID(event.target.value)} value={manufacturID} /></div>
+                        <div><TextField className="input" label="Manufacture" onChange={(event) => setManufacture(event.target.value)} value={manufacture} /></div>
                         <div className={"selectOption"}>
                             <FormControl style={{ minWidth: "40%" }} >
                                 <InputLabel htmlFor="age-native-simple">Food Pairing</InputLabel>

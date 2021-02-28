@@ -49,7 +49,7 @@ export default function WinePage(props) {
     }
   return (
     <div>
-      <div className={"buttonsAssets"}>
+      <div className={"buttonsWines"}>
         <Button variant="outlined"  onClick={() => setOpen(true)} style={{margin:'2%'}}>See More</Button>
         {haveWine()}
       </div>

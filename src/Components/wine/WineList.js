@@ -1,6 +1,6 @@
 import WineCard from './WineCard';
 import Grid from '@material-ui/core/Grid';
-
+import './WineList.css'
 export default function WineList(props) {
     const wineWanted = (item) => {
         return (
@@ -16,8 +16,11 @@ export default function WineList(props) {
         )
     }
     return (
-        <Grid container direction="row" justify="center" alignItems="center" style={{ marginBottom: "2%" }}>
-            { props.WineList.map(eachItem)}
-        </Grid>
+        <div className={'list'}>
+            <Grid container direction="row" justify="center" alignItems="center" style={{ marginBottom: "2%" }}>
+                {props.WineList.map(eachItem)}
+            </Grid>
+        </div>
+
     )
 }
