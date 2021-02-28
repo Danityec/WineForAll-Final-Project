@@ -9,11 +9,10 @@ export default function WineList(props) {
     }
     const eachItem = (item) => {
         return (
-            <>
-                {wineWanted(item)}
-            </>
+                <WineCard key={item._id} id={item._id} item={item} />
         )
     }
+    
     return (
         <div className={'list'}>
             <Grid container direction="row" justify="center" alignItems="center" style={{ marginBottom: "2%" }}>

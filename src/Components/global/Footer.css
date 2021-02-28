@@ -6,13 +6,18 @@
     left: 0%;
     display: flex;
     background-color: #B98E52;
-    color: #EDF5FF;
+    /* color: #EDF5FF; */
+    color: 000000;
+    font-family: 'Roboto Condensed', sans-serif;
+
 }
+
 .footer span {
     align-self: center;
     margin-left: 0.4%;
     font-size: 80%;
 }
+
 .footer .copy-right {
     height: 20px;
     width: 20px;

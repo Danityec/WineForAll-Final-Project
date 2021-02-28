@@ -1,25 +1,24 @@
-/* .assetSearchForm form{
-    margin-left: 35%;
-    margin-top: 3%;
-} */
+
 .wrapper{
     width: 100%;
     display: flex;
-    /* background-color: chartreuse; */
+    background-color: chartreuse;
+    overflow-x: hidden;
 }
 
 .background{
-    background-image: url('./Media/background.png');
+    /* background-image: url('./Media/background.png'); */
     position: absolute;
     /* float: left; */
-    
+    /* background-color: darkorange; */
 }
 .Search{
     top: 20%;
     height: 70%;
-    width: 50%;
+    width: 40%;
     margin-left: 60%;
     position: absolute;
+    background-color: darkred;
     
 }
 .input {
