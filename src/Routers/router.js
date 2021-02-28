@@ -1,6 +1,5 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import HomePage from "../Components/homePage/HomePage";
 import Wine from "../Components/wine/WineCard";
 import AdminHomePage from "../Components/admin/Admin";
 import Login from "../Components/login/Login";
